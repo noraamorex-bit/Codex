@@ -147,8 +147,8 @@ export default function Home() {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const gridRef = useRef(new Uint8Array(WIDTH * HEIGHT));
   const dataRef = useRef<Array<Cell | null>>(Array(WIDTH * HEIGHT).fill(null));
-  const historyRef = useRef<Uint8Array[]>([]);
-  const redoRef = useRef<Uint8Array[]>([]);
+  const historyRef = useRef<Array<Uint8Array<ArrayBuffer>>>([]);
+  const redoRef = useRef<Array<Uint8Array<ArrayBuffer>>>([]);
   const drawingRef = useRef(false);
   const anchorRef = useRef<{ x: number; y: number } | null>(null);
   const lastPointRef = useRef<{ x: number; y: number } | null>(null);
